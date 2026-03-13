@@ -1,6 +1,15 @@
 {% extends 'tapasapp/base.html' %}
 {% load static %}
 
+{% block sidebar %}
+    <nav>
+    <ul>
+        <li><a href="{% url 'view_menu' %}">Back to Main</a></li>
+    </ul>
+    </nav>
+    
+{% endblock %}
+
 {% block content %}
 <div class="container" style="max-width:600px; align-items: center; margin-top: 40px;">
     <h1 style="text-align:center; align-items: center; font-family: 'Courier New';">Add a New Dish!</h1>

@@ -1,5 +1,4 @@
 {% load static %}
-
 <html>
     <head>
         <title>The List</title>
@@ -15,17 +14,26 @@
             <div class="container-fluid">
                 <a class="navbar-brand mb-0" href="{% url 'view_menu' %}">My Tapas Menu</span> </a>
                 <a href="" style="color:white"><i class="material-icons">add</i></a>
-    
-            </div>
-
+            </div>  
         </nav>
 
-        <div class="container">
-            <div class="row">
-                    {% block content %}
-                    {% endblock %}
+     <div class="container-fluid">
+        <div class="row">
+            <!-- Sidebar -->
+            <div class="col-md-3 bg-light p-3">
+                {% block sidebar %}
+                <!-- Sidebar content goes here -->
+                {% endblock %}
             </div>
-        </div>  
+
+            <!-- Main content -->
+            <div class="col-md-9">
+                {% block content %}
+                {% endblock %}
+            </div>
+        </div>
+    </div>  
+    
         
         <footer class="footer bg-custom" style="background-color: #590404;">
 

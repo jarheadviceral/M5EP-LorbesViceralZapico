@@ -1,6 +1,17 @@
 {% extends 'tapasapp/base.html' %}
 {% load static %}
 
+{% block sidebar %}
+    <nav>
+    <ul>
+        <li><a href="#">View Wines</a></li>
+        <li><a href="#">View Large Dishes</a></li>
+        <li><a href="#">View Coursed Menus</a></li>
+    </ul>
+    </nav>
+
+{% endblock %}
+
                 {% block content %}
                 <div class="col-12">
                     <table class="table table-striped">
@@ -9,6 +20,7 @@
                                 <th class="table-dark" scope="col"> Name </th>
                                 <th class="table-dark" scope="col"> Cooking Time </th>
                                 <th class="table-dark" scope="col"> Prep Time </th>    
+                                <th class="table-dark" scope="col"> More Details</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -17,6 +29,9 @@
                                 <td> {{ d.name }} </td>
                                 <td> {{ d.prep_time }} </td>
                                 <td> {{ d.cook_time }} </td>
+                                <td>
+                                    <button class="btn btn-primary btn-sm">Details</button>
+                                </td>
                             </tr>
                             {% endfor %}
                         </tbody>
