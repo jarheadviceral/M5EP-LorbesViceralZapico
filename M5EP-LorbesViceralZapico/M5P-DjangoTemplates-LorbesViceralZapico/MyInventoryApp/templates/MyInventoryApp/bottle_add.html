@@ -1,0 +1,40 @@
+{% extends 'tapasapp/base.html' %}
+{% load static %}
+
+
+{% block content %}
+<div class="container" style="max-width:600px; align-items: center; margin-top: 40px;">
+    <h1 style="text-align:center; align-items: center; font-family: 'Courier New';">Add a New Dish!</h1>
+
+    <form method="get" style="display:flex; flex-direction:column; gap:15px;">
+
+        <label for="sku" style="text-align: center; font-family: 'verdana';">sku:</label>
+        <input type="text" id="sku" name="sku">
+        
+        <label for="brand" style="text-align: center; font-family: 'verdana';">Brand:</label>
+        <input type="text" id="brand" name="brand">
+        
+        <label for="cost" style="text-align: center; font-family: 'verdana';">Cost:</label>
+        <input type="number" id="cost" name="cost">
+
+        <label for="size" style="text-align: center; font-family: 'verdana';">Size:</label>
+        <input type="text" id="size" name="size">
+
+        <label for="mouth size" style="text-align: center; font-family: 'verdana';">Mouth Size:</label>
+        <input type="text" id="mouth_size" name="mouth_size">
+
+        <label for="color" style="text-align: center; font-family: 'verdana';">Color:</label>
+        <input type="text" id="color" name="color">
+
+        <label for="supplier" style="text-align: center; font-family: 'verdana';">Supplier:</label>
+        <input type="text" id="supplier" name="supplier">
+
+        <label for="supply" style="text-align: center; font-family: 'verdana';">Supply:</label>
+        <input type="number" id="supply" name="supply">
+        
+        <button type="submit" style="padding:10px; background-color:#590404; color: white; border:none; cursor:pointer;">
+            Save Bottle
+        </button>
+    </form>
+</div>
+{% endblock %}
